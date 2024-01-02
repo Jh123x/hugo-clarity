@@ -87,7 +87,7 @@
         {{- $onPageTags := $.Page.Params.tags }}
         {{- $slicedTags := ($value.ByCount | first $tagsLimit) }}
         {{- range $slicedTags }}
-        <a href='{{ absLangURL $key }}/{{ (replace .Name "#" "%23") | urlize }}/' alt="{{ .Title }}" class="post_tag button button_translucent" title="{{ .Name }}">
+        <a href='{{ absLangURL $key }}/{{ (replace .Name "#" "%23") | urlize }}/' alt="{{ .Name }}" class="post_tag button button_translucent" title="{{ .Name }}">
           {{ upper .Name }}
           <span class="button_tally">{{ .Count }}</span>
         </a>
